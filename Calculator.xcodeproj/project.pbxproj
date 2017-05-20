@@ -54,7 +54,6 @@
 		D4B12A9F1ED0C35100714241 /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				D4B12AA21ED0C35100714241 /* ViewController.swift */,
 				D4B12AF41ED0C47200714241 /* supporting Files */,
 			);
 			path = Calculator;
@@ -63,6 +62,7 @@
 		D4B12AF41ED0C47200714241 /* supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D4B12AA21ED0C35100714241 /* ViewController.swift */,
 				D4B12AA01ED0C35100714241 /* AppDelegate.swift */,
 				D4B12AA41ED0C35100714241 /* Main.storyboard */,
 				D4B12AA71ED0C35100714241 /* Assets.xcassets */,
