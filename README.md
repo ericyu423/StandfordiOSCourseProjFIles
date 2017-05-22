@@ -4,7 +4,7 @@
 
 
 
-# layout Review
+# layout Review: crtl + shift + click to select view layer
 
 <p align="center">
   <img src="https://github.com/ericyu423/StandfordiOSCourseProjFIles/blob/master/layout1.png" width="800"/>  
