@@ -88,3 +88,16 @@
  
  let y = "k,lh,jlkjh".components(separatedBy: ",")
  
+
+
+# anyobject
+
+                              func touch(sender: Anyobject){
+                                        if let button = sender as?  UIButton{
+
+                                        }else if let slider = sender as? UISlider
+
+                                        }
+                              }
+                              
+                              
