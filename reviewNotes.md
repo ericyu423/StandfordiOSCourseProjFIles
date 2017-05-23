@@ -101,3 +101,104 @@
                               }
                               
                               
+# CGRect , NScoder
+
+from story board               init (coder: NScoder)
+from program                   init(frame: CGRect)
+
+# Init UIView
+
+method1
+
+                    override init(frame:CGRect){//from storyboard
+                              super.init(frame: frame)
+                              setup()
+                    }
+                    override init(coder aDecoder: NSCoder){//force by compiler so it will work from storyboard
+                              super.init(coder: aDecoder)
+                              setup()
+                    }
+                    
+method 2
+                    awakeFromNib // from story board  only from storyboard
+ 
+ 
+ # frame vs bound
+ 
+ use bound to draw, your own coordinate system
+ 
+ to draw: override func drawarect()
+ 
+ to redraw: setNeeddisplay() or setneeddisplayinRect(rect: cgrect)
+ 
+ # 2 way to draw
+ 
+ c-like (non object oriented) API called  coregprahic and (object orietned) UIBezierPath
+ 
+ #  core Graphics 
+UIGraphicGetCurrentContext()
+create path
+set draw attiubtes
+stroke or fill the path
+ # UIBezierPath
+same except we don't need to know the context
+
+# Hit detection
+
+func containPoint(CGPoint) -> Bool // return if point is inside the path, path need to be closed obviouly
+
+# Alpha 0 = fully transparent, more alpha the more you can see...kind like the animal hierarchy
+
+#  color can have lpah
+
+let background = UIColor.yellow.colorWithAlphaComponent(0.05)
+
+if you want to draw transparency in your view need to set
+
+#  In View:  var opaque = false (to draw transpency)
+
+#  Letters in UIView custom draw:
+
+let text = NSAttributedString("hello") //objC class
+text.drawAtPoint(CGPoint)
+
+let textSize: CGize = text.size
+
+if you want to chagne the text use 
+
+let mutableText = NSMutableAttributedString("some String")
+
+setting attributes
+
+most used ones
+
+NSForegroundColorAttibuteName
+NSStrokeWidthAttributedName
+NSFontAttibutedName
+
+to remeber them just look at them this way
+NS   ForegroundColor   AttibuteName
+NS   StrokeWidth       AttributedName
+NS   Font              AttibutedName
+basically just foregroundcolor, strokeWidth and Font
+
+
+Font to use
+
+UIFontTextStyle.headline/body/footnote
+
+UIFontDescriptor for more fonts
+
+
+rotating your view
+
+u want to use the property
+
+var contentMode:UIViewContentMode
+.Left/.rifght....
+
+.scaletofill/scaleaspectfil....
+
+or 
+.redraw
+ 
