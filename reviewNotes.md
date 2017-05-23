@@ -83,5 +83,8 @@
                     
    
    //create type method by "static func"
+   
+# String methods example. a lot of data are commma seperated, this turns it into a an array
  
+ let y = "k,lh,jlkjh".components(separatedBy: ",")
  
