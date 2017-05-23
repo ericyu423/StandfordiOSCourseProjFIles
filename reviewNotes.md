@@ -77,5 +77,11 @@
                     
                     
     // i do not know about this
+    
+                    Double.abs(x)
+                    
+                    
+   
+   //create type method by "static func"
  
  
