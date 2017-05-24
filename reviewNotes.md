@@ -202,3 +202,12 @@ var contentMode:UIViewContentMode
 or 
 .redraw
  
+ 
+ #  @IBInspectable
+ 
+          var scale: CGFloat = 0.9
+          
+  you will need to explicitly put "CGFloat" for storyboard. if you omit  "CGFloat" it will not show up
+  
+  
+
