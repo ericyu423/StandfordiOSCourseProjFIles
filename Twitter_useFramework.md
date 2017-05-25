@@ -47,3 +47,9 @@
  
  note 3. put the UI update call insiide Dispatch main queue 
  
+ 
+ # Content hugging priority Tweeter(name) "verticale 251->252"
+ 
+ if tweeter verticle hugging is bigger that means, the "box" will "hug" the title therefor
+ the bottom view in the stack view will have rest of the space by itself
+ 
