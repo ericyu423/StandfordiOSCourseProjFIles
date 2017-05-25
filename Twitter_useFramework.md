@@ -23,3 +23,27 @@
   9. menu -> edit -> covert -> swift syntax (highlight the whole twistter folder) it will show u a tool box to select
   10. user.swift line 43. change var asPropertyList: AnyObject ---->    var asPropertyList: [String: Any]
   11. (make sure twitter framework is drag to embeded binaries)
+
+
+
+#  Multi-thread example
+
+         private func searchForTweets() {
+                if let request = twitterRequest() {
+                    lastTwitterRequest = request
+                    request.fetchTweets{ [weak self] newTweets in
+                       if request == self?.lastTwitterRequest {
+                        DispatchQueue.main.async {
+                            self?.tweets.insert(newTweets, at:0)
+                            self?.tableView.insertSections([0], with: .fade)
+                        }
+                        }
+                    }
+                }
+            }
+ note 1: twitterRequest execution is not in the mainquque, because it have to wait for the fetch result
+ 
+ note 2. tableView.insertSection is an UI update, all UI update should happen in mainqueue there for
+ 
+ note 3. put the UI update call insiide Dispatch main queue 
+ 
