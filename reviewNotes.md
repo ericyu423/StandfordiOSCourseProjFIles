@@ -211,3 +211,8 @@ or
   
   
 
+#  tableView refresh control
+
+1. select tableview
+2. property insepector Disable -> Enable
+3. a new refresh will appear in document outline (control drag as a action in code)
